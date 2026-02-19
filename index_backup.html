@@ -25,30 +25,14 @@
             position: relative;
         }
 
-        /* ============ GALAXY BACKGROUND ============ */
-        .galaxy-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -3;
-            background:
-                radial-gradient(ellipse at 15% 50%, rgba(88, 28, 135, 0.18) 0%, transparent 50%),
-                radial-gradient(ellipse at 85% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 40%),
-                radial-gradient(ellipse at 75% 60%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
-                radial-gradient(ellipse at 30% 30%, rgba(236, 72, 153, 0.06) 0%, transparent 45%),
-                #030014;
-        }
-
+        /* ============ BACKGROUND EFFECTS ============ */
         .stars-container {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -2;
+            z-index: -1;
             overflow: hidden;
         }
 
@@ -56,155 +40,44 @@
             position: absolute;
             background: white;
             border-radius: 50%;
-            animation: twinkle var(--dur, 3s) infinite var(--del, 0s);
+            animation: twinkle 3s infinite;
         }
 
-        .star:nth-child(1)  { width: 2px; height: 2px; top: 5%;  left: 12%; --dur: 3s;   --del: 0s; }
-        .star:nth-child(2)  { width: 1px; height: 1px; top: 8%;  left: 78%; --dur: 4s;   --del: 0.5s; }
-        .star:nth-child(3)  { width: 3px; height: 3px; top: 12%; left: 35%; --dur: 2.5s; --del: 1s; }
-        .star:nth-child(4)  { width: 1px; height: 1px; top: 18%; left: 92%; --dur: 3.5s; --del: 0.3s; }
-        .star:nth-child(5)  { width: 2px; height: 2px; top: 22%; left: 55%; --dur: 4s;   --del: 1.5s; }
-        .star:nth-child(6)  { width: 1px; height: 1px; top: 28%; left: 8%;  --dur: 3s;   --del: 2s; }
-        .star:nth-child(7)  { width: 2px; height: 2px; top: 32%; left: 68%; --dur: 2.8s; --del: 0.7s; }
-        .star:nth-child(8)  { width: 1px; height: 1px; top: 38%; left: 45%; --dur: 3.2s; --del: 1.2s; }
-        .star:nth-child(9)  { width: 3px; height: 3px; top: 42%; left: 22%; --dur: 3.8s; --del: 0.4s; }
-        .star:nth-child(10) { width: 1px; height: 1px; top: 48%; left: 88%; --dur: 2.5s; --del: 1.8s; }
-        .star:nth-child(11) { width: 2px; height: 2px; top: 52%; left: 15%; --dur: 3.3s; --del: 0.6s; }
-        .star:nth-child(12) { width: 1px; height: 1px; top: 56%; left: 72%; --dur: 4.2s; --del: 1.1s; }
-        .star:nth-child(13) { width: 2px; height: 2px; top: 62%; left: 42%; --dur: 2.7s; --del: 2.2s; }
-        .star:nth-child(14) { width: 1px; height: 1px; top: 68%; left: 95%; --dur: 3.6s; --del: 0.8s; }
-        .star:nth-child(15) { width: 3px; height: 3px; top: 72%; left: 28%; --dur: 3.1s; --del: 1.4s; }
-        .star:nth-child(16) { width: 1px; height: 1px; top: 78%; left: 62%; --dur: 2.9s; --del: 0.2s; }
-        .star:nth-child(17) { width: 2px; height: 2px; top: 82%; left: 5%;  --dur: 3.7s; --del: 1.6s; }
-        .star:nth-child(18) { width: 1px; height: 1px; top: 88%; left: 82%; --dur: 4.5s; --del: 0.9s; }
-        .star:nth-child(19) { width: 2px; height: 2px; top: 92%; left: 38%; --dur: 2.6s; --del: 2.5s; }
-        .star:nth-child(20) { width: 1px; height: 1px; top: 96%; left: 58%; --dur: 3.4s; --del: 1.3s; }
-        .star:nth-child(21) { width: 1px; height: 1px; top: 3%;  left: 48%; --dur: 3.9s; --del: 0.1s; }
-        .star:nth-child(22) { width: 2px; height: 2px; top: 15%; left: 65%; --dur: 2.4s; --del: 1.9s; }
-        .star:nth-child(23) { width: 1px; height: 1px; top: 25%; left: 3%;  --dur: 3.5s; --del: 0.5s; }
-        .star:nth-child(24) { width: 2px; height: 2px; top: 35%; left: 52%; --dur: 4.1s; --del: 2.1s; }
-        .star:nth-child(25) { width: 1px; height: 1px; top: 45%; left: 75%; --dur: 2.8s; --del: 0.3s; }
-        .star:nth-child(26) { width: 3px; height: 3px; top: 55%; left: 32%; --dur: 3.3s; --del: 1.7s; }
-        .star:nth-child(27) { width: 1px; height: 1px; top: 65%; left: 85%; --dur: 4.3s; --del: 0.7s; }
-        .star:nth-child(28) { width: 2px; height: 2px; top: 75%; left: 18%; --dur: 2.5s; --del: 2.3s; }
-        .star:nth-child(29) { width: 1px; height: 1px; top: 85%; left: 48%; --dur: 3.6s; --del: 0.4s; }
-        .star:nth-child(30) { width: 2px; height: 2px; top: 95%; left: 25%; --dur: 3.1s; --del: 1.5s; }
+        .star:nth-child(1) { width: 2px; height: 2px; top: 10%; left: 20%; animation-delay: 0s; }
+        .star:nth-child(2) { width: 1px; height: 1px; top: 15%; left: 80%; animation-delay: 0.5s; }
+        .star:nth-child(3) { width: 3px; height: 3px; top: 25%; left: 40%; animation-delay: 1s; }
+        .star:nth-child(4) { width: 1px; height: 1px; top: 35%; left: 90%; animation-delay: 1.5s; }
+        .star:nth-child(5) { width: 2px; height: 2px; top: 45%; left: 10%; animation-delay: 2s; }
+        .star:nth-child(6) { width: 1px; height: 1px; top: 55%; left: 70%; animation-delay: 2.5s; }
+        .star:nth-child(7) { width: 2px; height: 2px; top: 65%; left: 30%; animation-delay: 0.3s; }
+        .star:nth-child(8) { width: 1px; height: 1px; top: 75%; left: 85%; animation-delay: 0.8s; }
+        .star:nth-child(9) { width: 3px; height: 3px; top: 85%; left: 15%; animation-delay: 1.3s; }
+        .star:nth-child(10) { width: 1px; height: 1px; top: 95%; left: 60%; animation-delay: 1.8s; }
+        .star:nth-child(11) { width: 2px; height: 2px; top: 20%; left: 60%; animation-delay: 0.7s; }
+        .star:nth-child(12) { width: 1px; height: 1px; top: 30%; left: 25%; animation-delay: 1.2s; }
+        .star:nth-child(13) { width: 2px; height: 2px; top: 40%; left: 75%; animation-delay: 1.7s; }
+        .star:nth-child(14) { width: 1px; height: 1px; top: 50%; left: 45%; animation-delay: 0.2s; }
+        .star:nth-child(15) { width: 3px; height: 3px; top: 60%; left: 20%; animation-delay: 0.9s; }
+        .star:nth-child(16) { width: 1px; height: 1px; top: 70%; left: 80%; animation-delay: 1.4s; }
+        .star:nth-child(17) { width: 2px; height: 2px; top: 80%; left: 35%; animation-delay: 0.6s; }
+        .star:nth-child(18) { width: 1px; height: 1px; top: 90%; left: 70%; animation-delay: 1.1s; }
 
         @keyframes twinkle {
-            0%, 100% { opacity: 0.2; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.5); }
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
         }
 
-        /* Nebula clouds */
-        .nebula-overlay {
+        .starry-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            background: transparent;
             z-index: -2;
-            pointer-events: none;
-            opacity: 0.5;
         }
 
-        .nebula-cloud {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            animation: nebula-drift 30s ease-in-out infinite alternate;
-        }
-
-        .nebula-cloud:nth-child(1) {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent 70%);
-            top: -10%;
-            left: -5%;
-            animation-delay: 0s;
-        }
-
-        .nebula-cloud:nth-child(2) {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.2), transparent 70%);
-            top: 50%;
-            right: -10%;
-            animation-delay: -10s;
-        }
-
-        .nebula-cloud:nth-child(3) {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(236, 72, 153, 0.15), transparent 70%);
-            bottom: -5%;
-            left: 30%;
-            animation-delay: -20s;
-        }
-
-        .nebula-cloud:nth-child(4) {
-            width: 350px;
-            height: 350px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.2), transparent 70%);
-            top: 30%;
-            left: 50%;
-            animation-delay: -15s;
-        }
-
-        @keyframes nebula-drift {
-            0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(30px, -20px) scale(1.1); }
-            100% { transform: translate(-20px, 30px) scale(0.95); }
-        }
-
-        /* Shooting stars */
-        .shooting-stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .shooting-star {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: white;
-            border-radius: 50%;
-            box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.5);
-            animation: shoot linear infinite;
-            opacity: 0;
-        }
-
-        .shooting-star::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: 100%;
-            width: 80px;
-            height: 1px;
-            background: linear-gradient(to left, rgba(255, 255, 255, 0.7), transparent);
-            transform: translateY(-50%);
-        }
-
-        .shooting-star:nth-child(1) { top: 8%;  left: 0%;  animation-duration: 2s;   animation-delay: 1s; }
-        .shooting-star:nth-child(2) { top: 25%; left: 15%; animation-duration: 2.5s; animation-delay: 5s; }
-        .shooting-star:nth-child(3) { top: 5%;  left: 35%; animation-duration: 1.8s; animation-delay: 9s; }
-        .shooting-star:nth-child(4) { top: 18%; left: 55%; animation-duration: 2.2s; animation-delay: 13s; }
-        .shooting-star:nth-child(5) { top: 12%; left: 70%; animation-duration: 1.6s; animation-delay: 17s; }
-
-        @keyframes shoot {
-            0%   { transform: translate(0, 0) rotate(-35deg); opacity: 0; }
-            5%   { opacity: 1; }
-            70%  { opacity: 1; }
-            100% { transform: translate(600px, 300px) rotate(-35deg); opacity: 0; }
-        }
-
-        /* Cosmic dust particles */
-        .cosmic-dust {
+        .floating-particles {
             position: fixed;
             top: 0;
             left: 0;
@@ -214,28 +87,53 @@
             z-index: -1;
         }
 
-        .dust-particle {
+        .particle {
             position: absolute;
-            background: rgba(168, 85, 247, 0.4);
+            background: rgba(112, 66, 248, 0.3);
             border-radius: 50%;
-            animation: dust-float linear infinite;
+            animation: particle-float 8s linear infinite;
         }
 
-        .dust-particle:nth-child(1) { width: 3px; height: 3px; top: 10%; left: 15%; animation-delay: 0s;  animation-duration: 15s; }
-        .dust-particle:nth-child(2) { width: 2px; height: 2px; top: 20%; left: 80%; animation-delay: 2s;  animation-duration: 12s; }
-        .dust-particle:nth-child(3) { width: 4px; height: 4px; top: 30%; left: 25%; animation-delay: 4s;  animation-duration: 18s; }
-        .dust-particle:nth-child(4) { width: 2px; height: 2px; top: 50%; left: 60%; animation-delay: 1s;  animation-duration: 14s; }
-        .dust-particle:nth-child(5) { width: 3px; height: 3px; top: 70%; left: 40%; animation-delay: 3s;  animation-duration: 16s; }
-        .dust-particle:nth-child(6) { width: 2px; height: 2px; top: 85%; left: 90%; animation-delay: 5s;  animation-duration: 13s; }
-        .dust-particle:nth-child(7) { width: 3px; height: 3px; top: 40%; left: 5%;  animation-delay: 6s;  animation-duration: 17s; }
-        .dust-particle:nth-child(8) { width: 2px; height: 2px; top: 60%; left: 70%; animation-delay: 7s;  animation-duration: 11s; }
+        .particle:nth-child(1) { width: 4px; height: 4px; top: 5%; left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 2px; height: 2px; top: 15%; left: 85%; animation-delay: 1s; }
+        .particle:nth-child(3) { width: 3px; height: 3px; top: 25%; left: 15%; animation-delay: 2s; }
+        .particle:nth-child(4) { width: 1px; height: 1px; top: 35%; left: 90%; animation-delay: 3s; }
+        .particle:nth-child(5) { width: 2px; height: 2px; top: 45%; left: 5%; animation-delay: 4s; }
+        .particle:nth-child(6) { width: 3px; height: 3px; top: 55%; left: 95%; animation-delay: 5s; }
+        .particle:nth-child(7) { width: 1px; height: 1px; top: 65%; left: 25%; animation-delay: 6s; }
+        .particle:nth-child(8) { width: 2px; height: 2px; top: 75%; left: 75%; animation-delay: 7s; }
 
-        @keyframes dust-float {
-            0%   { transform: translateY(0) translateX(0); opacity: 0; }
-            10%  { opacity: 0.8; }
-            50%  { opacity: 0.3; }
-            90%  { opacity: 0.7; }
-            100% { transform: translateY(-100vh) translateX(40px); opacity: 0; }
+        @keyframes particle-float {
+            0% { transform: translateY(0px) translateX(0px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+        }
+
+        .floating-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-shape {
+            position: absolute;
+            border: 1px solid rgba(112, 66, 248, 0.2);
+            border-radius: 50%;
+            animation: shape-rotate 20s linear infinite;
+        }
+
+        .floating-shape:nth-child(1) { width: 100px; height: 100px; top: 10%; left: 5%; animation-delay: 0s; }
+        .floating-shape:nth-child(2) { width: 150px; height: 150px; top: 60%; left: 80%; animation-delay: 5s; }
+        .floating-shape:nth-child(3) { width: 80px; height: 80px; top: 80%; left: 10%; animation-delay: 10s; }
+
+        @keyframes shape-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .cursive {
@@ -295,9 +193,9 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 32px;
             background: rgba(3, 0, 20, 0.37);
-            padding: 8px 24px;
+            padding: 8px 32px;
             border-radius: 50px;
             border: 1px solid rgba(112, 66, 248, 0.38);
         }
@@ -306,11 +204,9 @@
             color: #e5e7eb;
             text-decoration: none;
             font-weight: 500;
-            font-size: 14px;
             transition: color 0.3s;
             position: relative;
             cursor: pointer;
-            white-space: nowrap;
         }
 
         .nav-links a:hover,
@@ -686,52 +582,12 @@
             padding-bottom: 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
-            display: flex;
-            gap: 24px;
-            align-items: center;
-            justify-content: space-between;
         }
 
         .education-item:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
-        }
-
-        .education-logo {
-            width: 80px;
-            height: 80px;
-            min-width: 80px;
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(112, 66, 248, 0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            padding: 10px;
-            transition: all 0.4s ease;
-            order: 2;
-            flex-shrink: 0;
-        }
-
-        .education-item:hover .education-logo {
-            border-color: rgba(168, 85, 247, 0.6);
-            box-shadow: 0 6px 24px rgba(112, 66, 248, 0.3);
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .education-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            filter: brightness(1.1);
-        }
-
-        .education-details {
-            flex: 1;
-            order: 1;
         }
 
         .education-degree {
@@ -803,9 +659,25 @@
             margin-top: -20px;
         }
 
+        .skill-group {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .skill-group-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #a855f7;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            padding-left: 8px;
+            border-left: 3px solid #a855f7;
+        }
+
         .skill-category {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             gap: 20px;
             width: 100%;
         }
@@ -815,7 +687,7 @@
             flex-direction: column;
             align-items: center;
             gap: 12px;
-            padding: 24px 12px;
+            padding: 24px 16px;
             background: rgba(112, 66, 248, 0.06);
             border: 1px solid rgba(112, 66, 248, 0.15);
             border-radius: 16px;
@@ -837,13 +709,10 @@
         }
 
         .skill-item:hover {
-            transform: translateY(-8px) scale(1.05);
-            border-color: rgba(168, 85, 247, 0.6);
-            box-shadow:
-                0 8px 30px rgba(112, 66, 248, 0.3),
-                0 0 20px rgba(168, 85, 247, 0.15),
-                inset 0 0 20px rgba(112, 66, 248, 0.05);
-            background: rgba(112, 66, 248, 0.12);
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(112, 66, 248, 0.5);
+            box-shadow: 0 8px 30px rgba(112, 66, 248, 0.25), 0 0 15px rgba(112, 66, 248, 0.1);
+            background: rgba(112, 66, 248, 0.1);
         }
 
         .skill-item:hover::before {
@@ -851,8 +720,8 @@
         }
 
         .skill-item img {
-            width: 52px;
-            height: 52px;
+            width: 56px;
+            height: 56px;
             filter: drop-shadow(0 2px 8px rgba(112, 66, 248, 0.3));
             transition: transform 0.4s ease, filter 0.4s ease;
             position: relative;
@@ -860,13 +729,13 @@
         }
 
         .skill-item:hover img {
-            transform: scale(1.2) rotate(5deg);
-            filter: drop-shadow(0 4px 16px rgba(168, 85, 247, 0.6));
+            transform: scale(1.15);
+            filter: drop-shadow(0 4px 12px rgba(112, 66, 248, 0.5));
         }
 
         .skill-item span {
             color: #e5e7eb;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 500;
             text-align: center;
             position: relative;
@@ -904,94 +773,47 @@
         }
 
         .project-card {
-            background: rgba(112, 66, 248, 0.08);
+            background: rgba(112, 66, 248, 0.1);
             border: 1px solid rgba(112, 66, 248, 0.2);
-            border-radius: 20px;
-            padding: 32px;
-            text-align: left;
-            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #a855f7, #06b6d4);
-            border-radius: 20px 20px 0 0;
-            opacity: 0;
-            transition: opacity 0.4s ease;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .project-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(112, 66, 248, 0.25);
-            border-color: rgba(168, 85, 247, 0.4);
+            box-shadow: 0 8px 32px rgba(112, 66, 248, 0.3);
         }
 
-        .project-card:hover::before {
-            opacity: 1;
-        }
-
-        .project-card .project-icon {
-            font-size: 2.4rem;
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
             margin-bottom: 16px;
-            display: inline-block;
         }
 
         .project-card h3 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 14px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
             color: white;
-            line-height: 1.3;
         }
 
-        .project-card .project-description {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .project-card .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 24px;
-        }
-
-        .project-card .project-tag {
-            background: rgba(168, 85, 247, 0.15);
-            color: #c084fc;
-            padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            border: 1px solid rgba(168, 85, 247, 0.2);
-        }
-
-        .project-card .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 28px;
-            background: linear-gradient(135deg, #a855f7, #06b6d4);
+        .project-card a {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(90deg, #a855f7, #06b6d4);
             color: white;
             text-decoration: none;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: transform 0.3s;
         }
 
-        .project-card .project-link:hover {
+        .project-card a:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
         }
 
         /* ============ RESUME SECTION ============ */
@@ -1017,17 +839,8 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             width: 100%;
-            max-width: 900px;
+            max-width: 700px;
             text-align: center;
-        }
-
-        .resume-embed {
-            width: 100%;
-            height: 600px;
-            border: 1px solid rgba(112, 66, 248, 0.3);
-            border-radius: 12px;
-            margin-bottom: 30px;
-            background: rgba(0, 0, 0, 0.3);
         }
 
         .resume-description {
@@ -1059,306 +872,6 @@
 
         .download-btn i {
             margin-right: 10px;
-        }
-
-        /* ============ CERTIFICATES SECTION ============ */
-        .certificates-section {
-            padding: 100px 5% 80px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .certificates-section .section-title {
-            margin-bottom: 20px;
-        }
-
-        .certificates-subtitle {
-            font-size: 18px;
-            color: #9ca3af;
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 50px;
-        }
-
-        .certificates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 28px;
-        }
-
-        .cert-card {
-            background: rgba(112, 66, 248, 0.06);
-            border: 1px solid rgba(112, 66, 248, 0.2);
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .cert-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #6366f1, #a855f7, #06b6d4);
-            z-index: 2;
-        }
-
-        .cert-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(168, 85, 247, 0.5);
-            box-shadow: 0 12px 40px rgba(112, 66, 248, 0.25);
-            background: rgba(112, 66, 248, 0.1);
-        }
-
-        .cert-preview {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 11;
-            overflow: hidden;
-            cursor: pointer;
-            border-bottom: 1px solid rgba(112, 66, 248, 0.15);
-        }
-
-        .cert-preview img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .cert-card:hover .cert-preview img {
-            transform: scale(1.05);
-        }
-
-        .cert-preview-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(3, 0, 20, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .cert-preview:hover .cert-preview-overlay {
-            opacity: 1;
-        }
-
-        .cert-preview-overlay i {
-            font-size: 36px;
-            color: white;
-            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
-        }
-
-        .cert-info {
-            padding: 24px;
-        }
-
-        .cert-card h3 {
-            font-size: 17px;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .cert-issuer {
-            font-size: 14px;
-            color: #b49bff;
-            font-weight: 500;
-            margin-bottom: 6px;
-        }
-
-        .cert-date {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.5);
-            margin-bottom: 12px;
-        }
-
-        .cert-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 10px;
-        }
-
-        .cert-skill-tag {
-            font-size: 11px;
-            color: #c4b5fd;
-            background: rgba(112, 66, 248, 0.12);
-            border: 1px solid rgba(112, 66, 248, 0.25);
-            padding: 3px 10px;
-            border-radius: 20px;
-            white-space: nowrap;
-        }
-
-        .cert-badge {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: linear-gradient(135deg, #6366f1, #a855f7);
-            color: white;
-            font-size: 11px;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            z-index: 3;
-        }
-
-        /* Lightbox Modal */
-        .cert-lightbox {
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            background: rgba(0, 0, 0, 0.92);
-            backdrop-filter: blur(10px);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-            cursor: zoom-out;
-        }
-
-        .cert-lightbox.active {
-            display: flex;
-            animation: lbFadeIn 0.25s ease;
-        }
-
-        .cert-lightbox img {
-            max-width: 90%;
-            max-height: 90vh;
-            border-radius: 12px;
-            box-shadow: 0 0 60px rgba(112, 66, 248, 0.3);
-            cursor: default;
-        }
-
-        .cert-lightbox .lb-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 32px;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.2s;
-        }
-
-        .cert-lightbox .lb-close:hover {
-            opacity: 1;
-        }
-
-        @keyframes lbFadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* ============ CAMPUS REVIEW SECTION ============ */
-        .campus-section {
-            padding: 100px 5% 80px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .campus-section .section-title {
-            margin-bottom: 20px;
-        }
-
-        .campus-subtitle {
-            font-size: 18px;
-            color: #9ca3af;
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 50px;
-        }
-
-        .campus-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 28px;
-        }
-
-        .campus-card {
-            background: rgba(112, 66, 248, 0.06);
-            border: 1px solid rgba(112, 66, 248, 0.2);
-            border-radius: 20px;
-            padding: 32px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
-        }
-
-        .campus-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(168, 85, 247, 0.5);
-            box-shadow: 0 12px 40px rgba(112, 66, 248, 0.2);
-            background: rgba(112, 66, 248, 0.1);
-        }
-
-        .campus-card-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 20px;
-        }
-
-        .campus-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #6366f1, #a855f7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: 700;
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .campus-reviewer {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .campus-reviewer h4 {
-            font-size: 16px;
-            font-weight: 600;
-            color: white;
-        }
-
-        .campus-reviewer span {
-            font-size: 13px;
-            color: #b49bff;
-        }
-
-        .campus-stars {
-            color: #f59e0b;
-            font-size: 14px;
-            margin-bottom: 14px;
-            letter-spacing: 2px;
-        }
-
-        .campus-card p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.75);
-            font-style: italic;
-        }
-
-        .campus-card .quote-icon {
-            position: absolute;
-            top: 16px;
-            right: 20px;
-            font-size: 40px;
-            color: rgba(112, 66, 248, 0.1);
         }
 
         /* ============ CONTACT SECTION ============ */
@@ -1683,11 +1196,15 @@
                 display: none;
             }
 
-            .nebula-cloud {
-                opacity: 0.3;
+            .stars-container .star:nth-child(n+15) {
+                display: none;
             }
 
-            .shooting-star:nth-child(n+4) {
+            .floating-particles .particle:nth-child(n+5) {
+                display: none;
+            }
+
+            .floating-shapes {
                 display: none;
             }
 
@@ -1730,14 +1247,6 @@
             }
 
             .contact-container {
-                grid-template-columns: 1fr;
-            }
-
-            .certificates-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .campus-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1790,32 +1299,6 @@
             .resume-container {
                 padding: 20px;
             }
-
-            .skill-category {
-                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-                gap: 12px;
-            }
-
-            .skill-item {
-                padding: 16px 8px;
-            }
-
-            .skill-item img {
-                width: 40px;
-                height: 40px;
-            }
-
-            .skill-item span {
-                font-size: 11px;
-            }
-
-            .cert-card {
-                padding: 20px;
-            }
-
-            .campus-card {
-                padding: 20px;
-            }
         }
 
         @media (max-width: 360px) {
@@ -1835,8 +1318,8 @@
     </style>
 </head>
 <body>
-    <!-- Galaxy Background -->
-    <div class="galaxy-bg"></div>
+    <!-- Background Effects -->
+    <div class="starry-bg"></div>
 
     <div class="stars-container">
         <div class="star"></div><div class="star"></div><div class="star"></div>
@@ -1845,36 +1328,19 @@
         <div class="star"></div><div class="star"></div><div class="star"></div>
         <div class="star"></div><div class="star"></div><div class="star"></div>
         <div class="star"></div><div class="star"></div><div class="star"></div>
-        <div class="star"></div><div class="star"></div><div class="star"></div>
-        <div class="star"></div><div class="star"></div><div class="star"></div>
-        <div class="star"></div><div class="star"></div><div class="star"></div>
-        <div class="star"></div><div class="star"></div><div class="star"></div>
     </div>
 
-    <div class="nebula-overlay">
-        <div class="nebula-cloud"></div>
-        <div class="nebula-cloud"></div>
-        <div class="nebula-cloud"></div>
-        <div class="nebula-cloud"></div>
+    <div class="floating-particles">
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div>
     </div>
 
-    <div class="shooting-stars">
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-    </div>
-
-    <div class="cosmic-dust">
-        <div class="dust-particle"></div>
-        <div class="dust-particle"></div>
-        <div class="dust-particle"></div>
-        <div class="dust-particle"></div>
-        <div class="dust-particle"></div>
-        <div class="dust-particle"></div>
-        <div class="dust-particle"></div>
-        <div class="dust-particle"></div>
+    <div class="floating-shapes">
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
     </div>
 
     <!-- ========== NAVBAR ========== -->
@@ -1890,8 +1356,6 @@
                 <a href="#about" class="nav-link">About me</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#projects" class="nav-link">Projects</a>
-                <a href="#certificates" class="nav-link">Certificates</a>
-                <a href="#campus-review" class="nav-link">Campus</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="#resume" class="nav-link">Resume</a>
             </div>
@@ -1916,8 +1380,6 @@
             <a href="#about" class="nav-link" onclick="toggleMobileMenu()">About me</a>
             <a href="#skills" class="nav-link" onclick="toggleMobileMenu()">Skills</a>
             <a href="#projects" class="nav-link" onclick="toggleMobileMenu()">Projects</a>
-            <a href="#certificates" class="nav-link" onclick="toggleMobileMenu()">Certificates</a>
-            <a href="#campus-review" class="nav-link" onclick="toggleMobileMenu()">Campus Review</a>
             <a href="#contact" class="nav-link" onclick="toggleMobileMenu()">Contact</a>
             <a href="#resume" class="nav-link" onclick="toggleMobileMenu()">Resume</a>
         </div>
@@ -1990,41 +1452,26 @@
             <h3 class="education-title">Education</h3>
 
             <div class="education-item">
-                <div class="education-logo">
-                    <img src="logo/hit.png" alt="HIT Logo">
-                </div>
-                <div class="education-details">
-                    <h4 class="education-degree">Graduation</h4>
-                    <p class="education-school">Haldia Institute of Technology, MAKAUT</p>
-                    <p class="education-year">2027</p>
-                    <span class="education-score">8.50/10</span>
-                </div>
+                <h4 class="education-degree">Graduation</h4>
+                <p class="education-school">Haldia Institute of Technology, MAKAUT</p>
+                <p class="education-year">2027</p>
+                <span class="education-score">8.50/10</span>
             </div>
 
             <div class="education-item">
-                <div class="education-logo">
-                    <img src="logo/mackout.png" alt="MAKAUT Logo">
-                </div>
-                <div class="education-details">
-                    <h4 class="education-degree">Intermediate</h4>
-                    <p class="education-school">Board of Higher Secondary Education, W.B.</p>
-                    <p class="education-school">Daspur Vivekananda High School</p>
-                    <p class="education-year">2022</p>
-                    <span class="education-score">81.00%</span>
-                </div>
+                <h4 class="education-degree">Intermediate</h4>
+                <p class="education-school">Board of Higher Secondary Education, W.B.</p>
+                <p class="education-school">Daspur Vivekananda High School</p>
+                <p class="education-year">2022</p>
+                <span class="education-score">81.00%</span>
             </div>
 
             <div class="education-item">
-                <div class="education-logo">
-                    <img src="logo/wbbsc.png" alt="WBBSE Logo">
-                </div>
-                <div class="education-details">
-                    <h4 class="education-degree">Matriculation</h4>
-                    <p class="education-school">Board of Secondary Education, W.B.</p>
-                    <p class="education-school">Daspur Vivekananda High School</p>
-                    <p class="education-year">2021</p>
-                    <span class="education-score">86.71%</span>
-                </div>
+                <h4 class="education-degree">Matriculation</h4>
+                <p class="education-school">Board of Secondary Education, W.B.</p>
+                <p class="education-school">Daspur Vivekananda High School</p>
+                <p class="education-year">2021</p>
+                <span class="education-score">86.71%</span>
             </div>
         </div>
     </section>
@@ -2036,90 +1483,115 @@
         <h2 class="section-title scroll-reveal">My Skills</h2>
         <p class="skills-subtitle scroll-reveal">Technologies and tools I work with to bring ideas to life</p>
 
-        <div class="skill-category scroll-reveal">
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                <span>JavaScript</span>
+        <!-- Languages -->
+        <div class="skill-group scroll-reveal">
+            <h3 class="skill-group-title">Languages</h3>
+            <div class="skill-category">
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                    <span>TypeScript</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    <span>Java</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+                    <span>C</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                    <span>C++</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                    <span>HTML</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                    <span>CSS</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+                    <span>SQL</span>
+                </div>
             </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
-                <span>TypeScript</span>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-group scroll-reveal">
+            <h3 class="skill-group-title">Frontend</h3>
+            <div class="skill-category">
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                    <span>React</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
+                    <span>Next.js 14</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux">
+                    <span>Redux</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
+                    <span>Tailwind CSS</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+                    <span>Bootstrap</span>
+                </div>
             </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-                <span>Java</span>
+        </div>
+
+        <!-- Backend & Database -->
+        <div class="skill-group scroll-reveal">
+            <h3 class="skill-group-title">Backend & Database</h3>
+            <div class="skill-category">
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js">
+                    <span>Express.js</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                    <span>MongoDB</span>
+                </div>
             </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
-                <span>C</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
-                <span>C++</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-                <span>HTML</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-                <span>CSS</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
-                <span>SQL</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-                <span>React</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
-                <span>Next.js 14</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux">
-                <span>Redux</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
-                <span>Tailwind CSS</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
-                <span>Bootstrap</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
-                <span>Node.js</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js">
-                <span>Express.js</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
-                <span>MongoDB</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-                <span>Git</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-                <span>GitHub</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
-                <span>Linux</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
-                <span>VS Code</span>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="skill-group scroll-reveal">
+            <h3 class="skill-group-title">Tools & Platforms</h3>
+            <div class="skill-category">
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    <span>Git</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                    <span>GitHub</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+                    <span>Linux</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                    <span>VS Code</span>
+                </div>
             </div>
         </div>
 
@@ -2137,104 +1609,16 @@
         <h2 class="section-title scroll-reveal">My Projects</h2>
 
         <div class="projects-grid">
-            <!-- Credit-Wise Loan System -->
             <div class="project-card scroll-reveal">
-                <span class="project-icon">&#129504;</span>
-                <h3>Credit-Wise Loan Approval System</h3>
-                <p class="project-description">
-                    A Machine Learning–based application designed to automate and optimize the loan approval process. 
-                    It predicts whether a loan applicant is eligible for approval based on their financial, employment, 
-                    and credit history data.
-                </p>
-                <div class="project-tags">
-                    <span class="project-tag">Machine Learning</span>
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">Streamlit</span>
-                    <span class="project-tag">Data Science</span>
-                </div>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                    <a href="https://creditwiseloanapprovalsystem-qx4kvffdhvy2c2ndpude8d.streamlit.app/" target="_blank" class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Live Demo
-                    </a>
-                    <a href="https://github.com/bidyut26maji/CreditWise_Loan_Approval_system" target="_blank" class="project-link" style="background: linear-gradient(135deg, #333, #555);">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
+                <img src="https://via.placeholder.com/300x200/7D43FF/FFFFFF?text=Bidyut+Maji's+Tools" alt="Bidyut Maji's Tools">
+                <h3>&#128736; Bidyut Maji's Tools</h3>
+                <a href="https://sizecompressordwall.blogspot.com/?fbclid=PAdGRjcAMijpdleHRuA2FlbQIxMQABp1vTbOOKEYaWsItO-UpDwKA2RJNJlcTZpxJJ8aL_3tx_WaJLdW6OgmN7HNTo_aem_OPAaI6HU-klGRTOIjVyDRg&m=1" target="_blank">View Project</a>
             </div>
 
-            <!-- Annyomitro - Food Donation Platform -->
             <div class="project-card scroll-reveal">
-                <span class="project-icon">&#127858;</span>
-                <h3>Annyomitro — Food Donation Platform</h3>
-                <p class="project-description">
-                    Every day, a huge amount of food is wasted by restaurants while many people go hungry. 
-                    This platform bridges that gap by allowing restaurants to post surplus food, 
-                    NGOs to request and collect it, and admins to monitor and ensure safety.
-                </p>
-                <div class="project-tags">
-                    <span class="project-tag">Full Stack</span>
-                    <span class="project-tag">Node.js</span>
-                    <span class="project-tag">Web App</span>
-                    <span class="project-tag">Social Impact</span>
-                </div>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                    <a href="https://annyomitro.onrender.com/" target="_blank" class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Live Demo
-                    </a>
-                    <a href="https://github.com/bidyut26maji/Secrect-project" target="_blank" class="project-link" style="background: linear-gradient(135deg, #333, #555);">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
-
-            <!-- AI Student Counselling -->
-            <div class="project-card scroll-reveal">
-                <span class="project-icon">&#129505;</span>
-                <h3>AI Student Counselling</h3>
-                <p class="project-description">
-                    Engineered to be a first responder in student mental wellness. Provides immediate, accessible, 
-                    and life-saving support by leveraging AI to analyze emotional distress and connect students 
-                    with the right resources instantly.
-                </p>
-                <div class="project-tags">
-                    <span class="project-tag">AI</span>
-                    <span class="project-tag">Mental Health</span>
-                    <span class="project-tag">Full Stack</span>
-                    <span class="project-tag">NLP</span>
-                </div>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                    <a href="https://counselling-9o4v.onrender.com/" target="_blank" class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Live Demo
-                    </a>
-                    <a href="https://github.com/bidyut26maji/ai-student-counselling" target="_blank" class="project-link" style="background: linear-gradient(135deg, #333, #555);">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
-
-            <!-- Iris Species Predictor -->
-            <div class="project-card scroll-reveal">
-                <span class="project-icon">&#127804;</span>
-                <h3>Iris Species Predictor</h3>
-                <p class="project-description">
-                    A machine learning web app built with Streamlit that classifies Iris flowers using a trained 
-                    Logistic Regression model. Users can adjust floral measurements via sliders and instantly 
-                    view predicted species along with probability visualizations.
-                </p>
-                <div class="project-tags">
-                    <span class="project-tag">Machine Learning</span>
-                    <span class="project-tag">Streamlit</span>
-                    <span class="project-tag">Logistic Regression</span>
-                    <span class="project-tag">Python</span>
-                </div>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                    <a href="https://mlmodeldeployment-fpmxnxi9xnypj9rstnhpea.streamlit.app/" target="_blank" class="project-link">
-                        <i class="fas fa-external-link-alt"></i> Live Demo
-                    </a>
-                    <a href="https://github.com/bidyut26maji/ML_Model_Deployment" target="_blank" class="project-link" style="background: linear-gradient(135deg, #333, #555);">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
+                <img src="https://via.placeholder.com/300x200/06B6D4/FFFFFF?text=Project+2" alt="Project 2">
+                <h3>&#128640; Project 2</h3>
+                <a href="#" target="_blank">View Project</a>
             </div>
         </div>
     </section>
@@ -2245,185 +1629,12 @@
     <section id="resume" class="resume-section">
         <h2 class="section-title scroll-reveal">My Resume</h2>
         <div class="resume-container scroll-reveal">
-            <iframe class="resume-embed" src="assets/Bidyut%20Maji%2023_IT_049%20(2)%20(1).pdf" title="Bidyut Maji Resume"></iframe>
-            <a href="assets/Bidyut%20Maji%2023_IT_049%20(2)%20(1).pdf" download class="download-btn">
+            <p class="resume-description">
+                Thank you for your interest in my professional background. My resume provides a comprehensive overview of my skills, education, and experience. Feel free to download it for a detailed look at my qualifications.
+            </p>
+            <a href="assets/BidyutmajiResume.pdf" download class="download-btn">
                 <i class="fas fa-download"></i> Download Resume
             </a>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ========== CERTIFICATES SECTION ========== -->
-    <section id="certificates" class="certificates-section">
-        <h2 class="section-title scroll-reveal">Certificates</h2>
-        <p class="certificates-subtitle scroll-reveal">Achievements and certifications that validate my skills</p>
-
-        <div class="certificates-grid">
-            <!-- Oracle OCI GenAI -->
-            <div class="cert-card scroll-reveal">
-                <span class="cert-badge">Verified</span>
-                <div class="cert-preview" onclick="openLightbox(this)">
-                    <img src="certificates/oracle.jpeg" alt="Oracle OCI GenAI Certificate">
-                    <div class="cert-preview-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="cert-info">
-                    <h3>Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</h3>
-                    <p class="cert-issuer"><i class="fas fa-building" style="margin-right:6px;"></i>Oracle</p>
-                    <p class="cert-date"><i class="fas fa-calendar-alt" style="margin-right:6px;"></i>October 2025 &bull; Expires October 2027</p>
-                    <div class="cert-skills">
-                        <span class="cert-skill-tag">LLMs</span>
-                        <span class="cert-skill-tag">OCI GenAI Service</span>
-                        <span class="cert-skill-tag">RAG</span>
-                        <span class="cert-skill-tag">Vector Database</span>
-                        <span class="cert-skill-tag">LangChain</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Google -->
-            <div class="cert-card scroll-reveal">
-                <span class="cert-badge">Verified</span>
-                <div class="cert-preview" onclick="openLightbox(this)">
-                    <img src="certificates/google.jpeg" alt="Google Certificate">
-                    <div class="cert-preview-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="cert-info">
-                    <h3>Google Certificate</h3>
-                    <p class="cert-issuer"><i class="fab fa-google" style="margin-right:6px;"></i>Google</p>
-                    <div class="cert-skills">
-                        <span class="cert-skill-tag">Cloud</span>
-                        <span class="cert-skill-tag">Technology</span>
-                        <span class="cert-skill-tag">Google</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Infosys -->
-            <div class="cert-card scroll-reveal">
-                <span class="cert-badge">Verified</span>
-                <div class="cert-preview" onclick="openLightbox(this)">
-                    <img src="certificates/infosys.jpeg" alt="Infosys Certificate">
-                    <div class="cert-preview-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="cert-info">
-                    <h3>Infosys Springboard Certificate</h3>
-                    <p class="cert-issuer"><i class="fas fa-building" style="margin-right:6px;"></i>Infosys</p>
-                    <div class="cert-skills">
-                        <span class="cert-skill-tag">Technology</span>
-                        <span class="cert-skill-tag">Professional</span>
-                        <span class="cert-skill-tag">Infosys</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Winter Training -->
-            <div class="cert-card scroll-reveal">
-                <span class="cert-badge">Completed</span>
-                <div class="cert-preview" onclick="openLightbox(this)">
-                    <img src="certificates/winter.jpeg" alt="Winter Training Certificate">
-                    <div class="cert-preview-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="cert-info">
-                    <h3>Winter Training Certificate</h3>
-                    <p class="cert-issuer"><i class="fas fa-graduation-cap" style="margin-right:6px;"></i>Training Program</p>
-                    <div class="cert-skills">
-                        <span class="cert-skill-tag">Training</span>
-                        <span class="cert-skill-tag">Development</span>
-                        <span class="cert-skill-tag">Winter Program</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Certificate -->
-            <div class="cert-card scroll-reveal">
-                <span class="cert-badge">Verified</span>
-                <div class="cert-preview" onclick="openLightbox(this)">
-                    <img src="certificates/Screenshot%202026-02-20%20024443.png" alt="Certificate">
-                    <div class="cert-preview-overlay"><i class="fas fa-search-plus"></i></div>
-                </div>
-                <div class="cert-info">
-                    <h3>Additional Certificate</h3>
-                    <p class="cert-issuer"><i class="fas fa-award" style="margin-right:6px;"></i>Certification Body</p>
-                    <div class="cert-skills">
-                        <span class="cert-skill-tag">Certified</span>
-                        <span class="cert-skill-tag">Professional</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificate Lightbox -->
-    <div class="cert-lightbox" id="certLightbox" onclick="closeLightbox(event)">
-        <button class="lb-close" onclick="closeLightbox(event)">&times;</button>
-        <img id="lightboxImg" src="" alt="Certificate Preview">
-    </div>
-
-    <div class="section-divider"></div>
-
-    <!-- ========== CAMPUS REVIEW SECTION ========== -->
-    <section id="campus-review" class="campus-section">
-        <h2 class="section-title scroll-reveal">Campus Review</h2>
-        <p class="campus-subtitle scroll-reveal">Experiences and memories from my campus journey</p>
-
-        <div class="campus-grid">
-            <div class="campus-card scroll-reveal">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <div class="campus-card-header">
-                    <div class="campus-avatar">H</div>
-                    <div class="campus-reviewer">
-                        <h4>Haldia Institute of Technology</h4>
-                        <span>B.Tech CSE &bull; 2023 - 2027</span>
-                    </div>
-                </div>
-                <div class="campus-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <p>"An incredible campus experience with world-class faculty and resources. The coding culture and tech community here have helped me grow immensely as a developer. The collaborative environment fosters innovation and creativity."</p>
-            </div>
-
-            <div class="campus-card scroll-reveal">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <div class="campus-card-header">
-                    <div class="campus-avatar">D</div>
-                    <div class="campus-reviewer">
-                        <h4>Daspur Vivekananda High School</h4>
-                        <span>Higher Secondary &bull; 2020 - 2022</span>
-                    </div>
-                </div>
-                <div class="campus-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>"This is where my academic journey truly began. Excellent teachers who believed in every student's potential. The discipline and values instilled here laid the foundation for my success in higher education."</p>
-            </div>
-
-            <div class="campus-card scroll-reveal">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <div class="campus-card-header">
-                    <div class="campus-avatar"><i class="fas fa-laptop-code" style="font-size:20px"></i></div>
-                    <div class="campus-reviewer">
-                        <h4>Tech Community &amp; Clubs</h4>
-                        <span>Active Participant</span>
-                    </div>
-                </div>
-                <div class="campus-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>"Being part of campus tech clubs and hackathons has been a game-changer. From coding competitions to workshop organizing, these experiences shaped my leadership and problem-solving abilities beyond the classroom."</p>
-            </div>
         </div>
     </section>
 
@@ -2605,32 +1816,6 @@
                     history.pushState(null, null, targetId);
                 }
             });
-        });
-
-        // ========== Certificate Lightbox ==========
-        function openLightbox(el) {
-            var img = el.querySelector('img');
-            var lightbox = document.getElementById('certLightbox');
-            document.getElementById('lightboxImg').src = img.src;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox(e) {
-            var lightbox = document.getElementById('certLightbox');
-            var lbImg = document.getElementById('lightboxImg');
-            if (e.target === lightbox || e.target.classList.contains('lb-close')) {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        }
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                var lightbox = document.getElementById('certLightbox');
-                lightbox.classList.remove('active');
-                document.body.style.overflow = '';
-            }
         });
 
         // ========== Handle direct URL hash on load ==========
