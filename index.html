@@ -282,14 +282,21 @@
         .logo-circle {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, #6366f1, #a855f7);
+            background: transparent;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 10px;
-            font-family: 'Cedarville Cursive', cursive;
-            font-size: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(168, 85, 247, 0.45);
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .nav-links {
@@ -1881,7 +1888,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <div class="logo-circle">B</div>
+                <div class="logo-circle"><img src="logo/logo.gif" alt="Bidyut Logo"></div>
                 <span>I'm Bidyut</span>
             </a>
 
